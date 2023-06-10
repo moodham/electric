@@ -1,0 +1,11 @@
+django
+django-tinymce
+fontawesomefree
+django-crispy-forms
+django-recaptcha
+pillow
+six
+psycopg2-binary
+django-allauth
+gunicorn
+crispy-bootstrap5

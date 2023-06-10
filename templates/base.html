@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% if context.post_keywords %}
+ 	<meta name="keywords" content="{{context.post_keywords}}">
+	<meta name="description" content="{{context.post_description}}">
+	{% endif %}
+
+	{% if context0.post_keywords %}
+	<meta name="keywords" content="{{context0.post_keywords}}">
+	<meta name="description" content="{{context0.post_description}}">
+	{% endif %}
+	
+	<meta name=”robots” content="index, follow">
+
+	<title> {{page_title}} </title>
+	<!-- boorstrap -->
+	<link rel="stylesheet" type="text/css" href={% static "css/bootstrap.min.css" %}>
+	<!-- themify-icon.css -->
+	<link rel="stylesheet" type="text/css" href={% static "css/themify-icons.css" %}>
+	<!-- animate.css -->
+	<!--<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- owl-carousel -->
+	<link rel="stylesheet" type="text/css" href={% static "css/owl.carousel.css" %}>
+	<!-- video.min.css -->
+	<link rel="stylesheet" type="text/css" href={% static "css/video.min.css" %}>
+	<!-- menu style -->
+	<link rel="stylesheet" type="text/css" href={% static "css/menu.css" %}>
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
+	<!-- responsive.css -->
+	<link rel="stylesheet" type="text/css" href={% static "css/responsive.css" %}>
+
+</head>
+
+<body>
+
+	<!-- Start of Header============================================= -->
+	<header>
+		<div id="main-menu" class="main-menu-container tbg navbar-fixed-top">
+			<div class="main-menu">
+				<div class="container">
+					<div class="row">
+						<div class="navbar navbar-default" role="navigation">
+							<div class="container-fluid">
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+										data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<i class="ti-menu"></i>
+									</button><!-- /.navbar-toggle collapsed -->
+									<a class="navbar-brand text-uppercase" href="{%url 'home'%}">
+										<img src={% static "pics/logo/logo.png" %} alt="logo"></a>
+								</div><!-- /.navbar-header -->
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<nav class="collapse navbar-collapse navbar-left" id="bs-example-navbar-collapse-1">
+									<ul id="main-nav" class="navbar-nav" style="list-style-type:none;">
+										<li><a href="http://electric-wiring.ir/article/درباره برق کشی ساختمان">درباره ما</a></li>
+										<li><a href="{% url 'blogs name'  %}"> بلاگ</a></li>
+										<li><a href="{% url 'tells'  %}"> تعمیرات تلفن سانترال</a></li>
+																				<li><a href="{% url 'antenas'  %}"> انتن مرکزی</a></li>
+										<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود <span
+													class="ti-import"></span></a></li>
+
+									</ul><!-- /#main-nav -->
+								</nav><!-- /.navbar-collapse -->
+							</div><!-- /.container-fluid -->
+						</div><!-- /.navbar navbar-default -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.full-main-menu -->
+		</div><!-- #main-menu -->
+		<!-- Main Menu end -->
+	</header> <!-- .cd-auto-hide-header -->
+	<!-- End of Header ============================================= -->
+
+	<!-- Start of download ============================================= -->
+	<section id="download-area" class="download-section">
+		<div class="container">
+			<div class="row section-content">
+				<div class="download-area-content  text-center">
+					<div class="download-number  pb10">
+						<h1>{{page_title}}</h1>
+					</div>
+
+				</div>
+			</div><!--  /row -->
+		</div><!--  /container -->
+	</section>
+	<!-- End of  download ============================================= -->
+
+
+	<!-- //section-title -->
+
+
+	{% block content %} {% endblock %}
+
+
+	<!-- Start of footer section ============================================= -->
+	<footer>
+		<section id="footer-area" class="footer-area-section">
+			<div class="container">
+				<div class="row section-content">
+					<div class="footer-area-content">
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<div class="footer-content">
+									<span class="right deep-black"> | Translated by electrical buildings.com. All right
+										reserved</span>
+									<div class="footer-address mt20">
+										<span>
+											آدرس : سعدی | ایران
+											<br>
+											09127169670
+										</span>
+									</div>
+									<div class="footer-social ul-li mt20">
+										<ul class="footer-social-list">
+											<li><a><span class="ti-facebook"></span></a></li>
+											<li><a><span class="ti-twitter-alt"></span></a></li>
+											<li><a><span class="ti-google"></span></a></li>
+											<li><a><span class="ti-vimeo-alt"></span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- //col-sm-4 -->
+
+							<div class="col-md-3 col-sm-6">
+								<div class="footer-service-list">
+
+									<div class="service-list ul-li ul-li-block">
+										<ul class="service-list-item">
+
+											<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //1st service -->
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="footer-service-list">
+									<div class="footer-widget pb20">
+										<h3 class="widgettile deep-black">پشتیبانی</h3>
+									</div>
+									<div class="service-list ul-li ul-li-block">
+										<ul class="service-list-item">
+
+											<li><a href="http://electric-wiring.ir/article/تماس با ما">تماس با ما</a></li>
+											  
+											<li>time is {% now "jS F Y H:i" %} </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- //col-sm-4 -->
+							<div class="col-md-3 col-sm-6">
+
+								<span>جدیدترین اخبار ما را از دست ندهید</span>
+								<div class="newsletter">
+									<form action="#" method="get">
+										<div class="newsletter-email">
+											<input type="email" class="">
+											<button type="submit" value="ارسال"><span
+													class="orange-gred ti-arrow-left"></span></button>
+										</div>
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div><!--  //row -->
+				</div><!--  //footer-area-content -->
+			</div><!--  //container -->
+		</section>
+	</footer>
+	<!-- End of footer section ============================================= -->
+
+	<!--  Js Library -->
+	<script type="text/javascript" src={% static "js/jquery-2.1.4.min.js" %}></script>
+	<!-- Include  for bootstrap -->
+	<script type="text/javascript" src={% static "js/bootstrap.min.js" %}></script>
+	<!-- Include Owl-carousel -->
+	<script type="text/javascript" src={% static "js/owl.carousel.min.js" %}></script>
+	<!-- Include jquery.magnific-popup.min.js-->
+	<script type="text/javascript" src={% static "js/jquery.magnific-popup.min.js" %}></script>
+	<!-- Include script.js-->
+	<script type="text/javascript" src={% static "js/script.js" %}></script>
+
+</body>
+
+</html>
