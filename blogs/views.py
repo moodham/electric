@@ -18,7 +18,7 @@ def tells(request):
     a = range(0, a + 1)
     print(a)
     x = range(6, context.count()+1, 6)
-    page_title = "تمامی مطالب تلفن سانترال"
+    page_title = " مطالب تلفن سانترال"
     print(x)
     x = {k: v+1 for k, v in zip(x, a)}
     print(type(x), x)
