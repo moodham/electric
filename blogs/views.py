@@ -58,6 +58,7 @@ def tell(request, slug):
     print(slug)
     slug=urllib.parse.unquote(slug)
     context = Netposts.objects.filter(post_title=slug)
+    
     for i in context:
 
         print(i.pk, "contextcontextcontextcontextcontextcontext")
@@ -147,6 +148,7 @@ def antenna(request, slug):
     print(slug)
     slug=urllib.parse.unquote(slug)
     context = antena.objects.filter(post_title=slug)
+    
     for i in context:
 
         print(i.pk, "contextcontextcontextcontextcontextcontext")
