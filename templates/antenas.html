@@ -3,161 +3,163 @@
 {% block content %}
 
 
-				<div class="extra-features-content">
-					<div class="row">
-						<div class="col-md-4 col-sm-6">
-							<div class="extra-right">
-								<div class="extra-left-content">
-									<div class="extra-icon-text text-left">
-										{% for i in context %}
-										{% if i.id == 1 %}
-										<a href="antena/{{ i.post_title }}" >
-										<div class="features-icon text-center" >
+<div class="extra-features-content">
+	<div class="row">
+		<div class="col-md-4 col-sm-6">
+			<div class="extra-right">
+				<div class="extra-left-content">
+					<div class="extra-icon-text ">
+						{% for i in context %}
+						{% if i.id == 1 %}
+						<a href="antena/{{ i.post_title }}">
+							<div class="features-icon text-center">
 
-											<i class="orange-gred ti-paint-bucket"></i>
-										</div>
-										<div class="features-text pt25">
-											<div class="features-text-title text-right pb10">
-
-
-												<h3 class="deep-black">{{ i.post_title }}</h3>
-											</div>
-											<div class="features-text-dec text-left">
-												<span>{{ i.post_content|truncatewords:10|safe }}</span>
-											</div>
-										</div></a>
-									</div>
-								</div>
-								<!-- // extra-right-content -->
-								{% elif i.id == 2 %}
-								<div class="extra-left-content">
-									<div class="extra-icon-text text-left">
-										<a href="antena/{{ i.post_title }}" >
-										<div class="features-icon text-center">
-											<i class="orange-gred ti-user"></i>
-										</div>
-										<div class="features-text pt25">
-											<div class="features-text-title text-right pb10">
-												<h3 class="deep-black">{{ i.post_title }}</h3>
-											</div>
-											<div class="features-text-dec text-left">
-												<span>{{ i.post_content|truncatewords:10|safe}}</span>
-											</div>
-										</div>
-										</a>
-									</div>
-								</div>
-								<!-- // extra-right-content -->
-								{% elif i.id == 3 %}
-								<div class="extra-left-content">
-									<div class="extra-icon-text text-left">
-										<a href="antena/{{ i.post_title }}" >
-										<div class="features-icon text-center">
-											<i class="orange-gred ti-desktop"></i>
-										</div>
-										<div class="features-text pt25">
-											<div class="features-text-title text-right pb10">
-												<h3 class="deep-black">{{ i.post_title }}</h3>
-											</div>
-											<div class="features-text-dec text-left">
-												<span>{{ i.post_content|truncatewords:10 |safe}}</span>
-
-											</div>
-										</div></a>
-									</div>
-								</div>
-								<!-- // extra-left-content -->
-							</div><!-- /extra-left -->
-						</div>
-
-						<!-- /col-sm-3 -->
-						<div class="col-sm-4">
-							<div class="extra-pic text-center">
-								<img src= {% static  "pics/mock-up/extra.png" %} alt="img">
+								<i class="orange-gred ti-paint-bucket"></i>
 							</div>
-						</div>
+							<div class="features-text pt25">
+								<div class="features-text-title  pb10">
 
-						<!-- /col-sm-6 -->
-						<div class="col-md-4 col-sm-6">
-							<div class="extra-left">
-								<div class="extra-left-content">
-									<div class="extra-icon-text text-right">
-										{% elif i.id == 4 %}
-										<a href="antena/{{ i.post_title }}" >
-										<div class="features-icon text-center">
-											<i class="orange-gred ti-money"></i>
-										</div>
-										<div class="features-text pt25">
-											<div class="features-text-title text-right pb10">
 
-												<h3 class="deep-black">{{ i.post_title }}</h3>
-											</div>
-											<div class="features-text-dec text-right">
-												<span>{{ i.post_content|truncatewords:10|safe }}</span>
-											</div>
-										</div>
-										</a>
-									</div>
+									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<!-- // extra-left-content -->
-
-								<div class="extra-left-content">
-									<div class="extra-icon-text text-right">
-										{% elif i.id == 5 %}
-										<a href="antena/{{ i.post_title }}" >
-										<div class="features-icon text-center">
-											<i class="orange-gred ti-eye"></i>
-										</div>
-										<div class="features-text pt25">
-											<div class="features-text-title text-right pb10">
-
-												<h3 class="deep-black">{{ i.post_title }}</h3>
-											</div>
-											<div class="features-text-dec text-right">
-												<span>{{ i.post_content|truncatewords:10|safe }}</span>
-											</div>
-										</div>
-										</a>
-									</div>
+								<div class="features-text-dec ">
+									<span>{{ i.post_content|truncatewords:10|safe }}</span>
 								</div>
-								<!-- // extra-left-content -->
-
-								<div class="extra-left-content">
-									<div class="extra-icon-text text-right">
-										{% elif i.id == 6 %}
-										<a href="antena/{{ i.post_title }}" >
-										<div class="features-icon text-center">
-											<i class="orange-gred ti-comment-alt"></i>
-										</div>
-										<div class="features-text pt25">
-											<div class="features-text-title text-right pb10">
-
-												<h3 class="deep-black">{{ i.post_title }}</h3>
-											</div>
-											<div class="features-text-dec text-right">
-												<span>{{ i.post_content|truncatewords:10|safe }}</span>
-											</div>
-										</div>
-										</a>
-									</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- // extra-right-content -->
+				{% elif i.id == 2 %}
+				<div class="extra-left-content">
+					<div class="extra-icon-text ">
+						<a href="antena/{{ i.post_title }}">
+							<div class="features-icon text-center">
+								<i class="orange-gred ti-user"></i>
+							</div>
+							<div class="features-text pt25">
+								<div class="features-text-title  pb10">
+									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<!-- // extra-left-content -->
-							</div><!-- /extra-left -->
-						</div>
-						<!-- /col-sm-3 -->
-					</div><!-- /row -->
-				</div><!-- /extra-features-content -->
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</section>
-							{% endif %}
- 		   				{% endfor %}
-	<!-- End of some extra features ============================================= -->
+								<div class="features-text-dec ">
+									<span>{{ i.post_content|truncatewords:10|safe}}</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- // extra-right-content -->
+				{% elif i.id == 3 %}
+				<div class="extra-left-content">
+					<div class="extra-icon-text ">
+						<a href="antena/{{ i.post_title }}">
+							<div class="features-icon text-center">
+								<i class="orange-gred ti-desktop"></i>
+							</div>
+							<div class="features-text pt25">
+								<div class="features-text-title  pb10">
+									<h3 class="deep-black">{{ i.post_title }}</h3>
+								</div>
+								<div class="features-text-dec ">
+									<span>{{ i.post_content|truncatewords:10 |safe}}</span>
+
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- // extra-left-content -->
+			</div><!-- /extra-left -->
+		</div>
+
+		<!-- /col-sm-3 -->
+		<div class="col-sm-4">
+			<div class="extra-pic text-center">
+				<img src={% static "pics/mock-up/extra.png" %} alt="img">
+			</div>
+		</div>
+
+		<!-- /col-sm-6 -->
+		<div class="col-md-4 col-sm-6">
+			<div class="extra-left">
+				<div class="extra-left-content">
+					<div class="extra-icon-text ">
+						{% elif i.id == 4 %}
+						<a href="antena/{{ i.post_title }}">
+							<div class="features-icon text-center">
+								<i class="orange-gred ti-money"></i>
+							</div>
+							<div class="features-text pt25">
+								<div class="features-text-title  pb10">
+
+									<h3 class="deep-black">{{ i.post_title }}</h3>
+								</div>
+								<div class="features-text-dec ">
+									<span>{{ i.post_content|truncatewords:10|safe }}</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- // extra-left-content -->
+
+				<div class="extra-left-content">
+					<div class="extra-icon-text ">
+						{% elif i.id == 5 %}
+						<a href="antena/{{ i.post_title }}">
+							<div class="features-icon text-center">
+								<i class="orange-gred ti-eye"></i>
+							</div>
+							<div class="features-text pt25">
+								<div class="features-text-title  pb10">
+
+									<h3 class="deep-black">{{ i.post_title }}</h3>
+								</div>
+								<div class="features-text-dec ">
+									<span>{{ i.post_content|truncatewords:10|safe }}</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- // extra-left-content -->
+
+				<div class="extra-left-content">
+					<div class="extra-icon-text ">
+						{% elif i.id == 6 %}
+						<a href="antena/{{ i.post_title }}">
+							<div class="features-icon text-center">
+								<i class="orange-gred ti-comment-alt"></i>
+							</div>
+							<div class="features-text pt25">
+								<div class="features-text-title  pb10">
+
+									<h3 class="deep-black">{{ i.post_title }}</h3>
+								</div>
+								<div class="features-text-dec ">
+									<span>{{ i.post_content|truncatewords:10|safe }}</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- // extra-left-content -->
+			</div><!-- /extra-left -->
+		</div>
+		<!-- /col-sm-3 -->
+	</div><!-- /row -->
+</div><!-- /extra-features-content -->
+</div><!-- /row -->
+</div><!-- /container -->
+</section>
+{% endif %}
+{% endfor %}
+<!-- End of some extra features ============================================= -->
 
 <nav aria-label="Page navigation example">
 	<ul class="pagination">
 		{% for i , v in x.items %}
-		<li class="page-item"><a  href="antenas/{{ i }}">صفحه{{ v }} </a></li>
+		<li class="page-item"><a href="antenas/{{ i }}">صفحه{{ v }} </a></li>
 		{% endfor %}
 	</ul>
 </nav>
