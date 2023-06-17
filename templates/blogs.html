@@ -8,7 +8,7 @@
 		<div class="col-md-4 col-sm-6">
 			<div class="extra-right">
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						{% for i in context %}
 						{% if i.id == 1 %}
 						<a href="blog/{{ i.post_title }}">
@@ -17,12 +17,12 @@
 								<i class="orange-gred ti-paint-bucket"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:10|safe }}</span>
 								</div>
 							</div>
@@ -32,16 +32,16 @@
 				<!-- // extra-right-content -->
 				{% elif i.id == 2 %}
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						<a href="blog/{{ i.post_title }}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-user"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:10|safe}}</span>
 								</div>
 							</div>
@@ -51,16 +51,16 @@
 				<!-- // extra-right-content -->
 				{% elif i.id == 3 %}
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						<a href="blog/{{ i.post_title }}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-desktop"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:10 |safe}}</span>
 
 								</div>
@@ -83,18 +83,18 @@
 		<div class="col-md-4 col-sm-6">
 			<div class="extra-left">
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						{% elif i.id == 4 %}
 						<a href="blog/{{ i.post_title }}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-money"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:10|safe }}</span>
 								</div>
 							</div>
@@ -104,18 +104,18 @@
 				<!-- // extra-left-content -->
 
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						{% elif i.id == 5 %}
 						<a href="blog/{{ i.post_title }}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-eye"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:10|safe }}</span>
 								</div>
 							</div>
@@ -125,18 +125,18 @@
 				<!-- // extra-left-content -->
 
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						{% elif i.id == 6 %}
 						<a href="blog/{{ i.post_title }}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-comment-alt"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:10|safe }}</span>
 								</div>
 							</div>

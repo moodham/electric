@@ -15,19 +15,19 @@
 				<div class="extra-left-content">
 					{% for i in context %}
 					{% if i.id == pagenumbers %}
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						<a href="{% url 'blog name'  i.post_title  %}">
 							<div class="features-icon text-center">
 
 								<i class="orange-gred ti-paint-bucket"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:20|safe }}</span>
 								</div>
 							</div>
@@ -37,16 +37,16 @@
 				<!-- // extra-right-content -->
 				{% elif i.id == pagenumbers1 %}
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						<a href="{% url 'blog name'  i.post_title  %}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-user"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:20|safe}}</span>
 								</div>
 							</div>
@@ -55,16 +55,16 @@
 				<!-- // extra-right-content -->
 				{% elif i.id == pagenumbers2 %}
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 						<a href="{% url 'blog name'  i.post_title  %}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-desktop"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:20|safe }}</span>
 
 								</div>
@@ -87,18 +87,18 @@
 			<div class="extra-left">
 				{% elif i.id == pagenumbers3 %}
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 
 						<a href="{% url 'blog name'  i.post_title  %}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-money"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:20|safe }}</span>
 								</div>
 							</div>
@@ -108,18 +108,18 @@
 
 				{% elif i.id == pagenumbers4 %}
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 
 						<a href="{% url 'blog name'  i.post_title  %}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-eye"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:20|safe }}</span>
 								</div>
 							</div>
@@ -129,18 +129,18 @@
 
 				{% elif i.id == pagenumbers5 %}
 				<div class="extra-left-content">
-					<div class="extra-icon-text text-right">
+					<div class="extra-icon-text ">
 
 						<a href="{% url 'blog name'  i.post_title  %}">
 							<div class="features-icon text-center">
 								<i class="orange-gred ti-comment-alt"></i>
 							</div>
 							<div class="features-text pt25">
-								<div class="features-text-title text-right pb10">
+								<div class="features-text-title  pb10">
 
 									<h3 class="deep-black">{{ i.post_title }}</h3>
 								</div>
-								<div class="features-text-dec text-right">
+								<div class="features-text-dec ">
 									<span>{{ i.post_content|truncatewords:20|safe }}</span>
 								</div>
 							</div>
