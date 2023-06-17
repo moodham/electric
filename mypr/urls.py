@@ -22,9 +22,11 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path("", include('blogs.urls')),
     path('admin/', admin.site.urls),
+    
+
     path('tinymce/', include('tinymce.urls')),
+    path("", include('blogs.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

@@ -7,7 +7,7 @@
 
 	<div class="starter-template">
 
-		<div class="extra-icon-text text-left">
+		<div class="extra-icon-text text-right">
 			{% for i in context %}
 
 
@@ -16,12 +16,12 @@
 				<i class="orange-gred ti-light-bulb"></i>
 			</div>
 			<div class="features-text pt25">
-				<div class="features-text-title text-left pb10">
+				<div class="features-text-title text-right pb10">
 
 
 					<h3 class="deep-black text-center">{{ i.post_title }}</h3>
 				</div>
-				<div class="features-text text-left">
+				<div class="features-text text-right">
 					<span>{{ i.post_content|safe }}</span>
 				</div>
 			</div>
@@ -45,10 +45,10 @@
 					<div class="card">
 						<div class="container">
 							{% for i in comment %}
-							
+
 							<img class="rounded-circle shadow-1-strong me-3"
-								src="img/Photos/Avatars/img%20({{ forloop.counter  }}).webp"
-								alt="avatar" width="60" height="60" />
+								src="img/Photos/Avatars/img%20({{ forloop.counter  }}).webp" alt="avatar" width="60"
+								height="60" />
 
 							<ul class="list-inline">
 								<li><a href="#">{{ i.author_name }}</a></li>
@@ -62,8 +62,7 @@
 							<div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
 								<div class="d-flex flex-start w-100">
 									<img class="rounded-circle shadow-1-strong me-3"
-										src="/img/Photos/Avatars/img%20(13).webp" alt="avatar"
-										width="40" height="40" />
+										src="/img/Photos/Avatars/img%20(13).webp" alt="avatar" width="40" height="40" />
 
 								</div>
 
