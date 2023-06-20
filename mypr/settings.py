@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
+SITE_ID = 4  #for sighn with google change digit -1 to 5  if error of DoesNotExist at /google/login/
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,19 +37,45 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blogs',
-
     
+    'blogs',
     'tinymce',
-
     'fontawesomefree',
+
+    'django.contrib.sites', #for sighn with google
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 
 
 
 ]
 
 
+#Django Google OAuth   --#for sighn with google
 
+SOCIALACCOUNT_LOGIN_ON_GET=True
+
+AUTHENTICATION_BACKENDS = [
+    
+    'allauth.account.auth_backends.AuthenticationBackend'
+    ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+# end Django Google OAuth   --#for sighn with google
 
 
 MIDDLEWARE = [

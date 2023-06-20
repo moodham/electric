@@ -35,7 +35,6 @@
 
 
 
-
 	<header>
 		<div id="main-menu" class="main-menu-container tbg navbar-fixed-top">
 			<div class="main-menu">
@@ -77,6 +76,11 @@
 	</header> <!-- .cd-auto-hide-header -->
 	<!-- End of Header ============================================= -->
 
+
+
+
+
+
 	<!-- Start of banner section ============================================= -->
 	<section id="banner-area" class="banner-area-section home-2">
 		<div class="container">
@@ -107,6 +111,18 @@
 		</div><!-- /.container -->
 	</section>
 	<!-- End of banner section ============================================= -->
+	
+		<!-- Start #for sighn with google ============================================= -->
+
+	
+	{% load socialaccount %}
+<button class="btn btn-outline-info">
+	<a href="{% provider_login_url 'google'%}?next=/">
+		<i class="fab fa-google"></i>
+		Login with Google
+	</a>
+</button>
+		<!-- End #for sighn with google ============================================= -->
 
 	<!-- Start of features section============================================= -->
 	<section id="features" class="features-section">

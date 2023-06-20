@@ -26,6 +26,7 @@ urlpatterns = [
     
 
     path('tinymce/', include('tinymce.urls')),
+    path("", include("allauth.urls")), # #for sighn with google
     path("", include('blogs.urls')),
 ]
 if settings.DEBUG:
