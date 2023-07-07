@@ -5,11 +5,25 @@ from .models import posts, Article, comments,Netposts,antena
 from django.shortcuts import render
 from .form import commentform
 import urllib
-
+from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.models import User, Group
 
 # class home(TemplateView):
 #    template_name = "index.html"
 
+
+def home(request):
+
+    context2 = posts.objects.all().order_by("id")
+    a = int(context2.count())
+    context = posts.objects.all()[a-6:a]
+    a = int(context.count())
+    print(posts.objects.count())
+    print(context)
+    return render(request, "index.html", {"context": context})
+
+@login_required(login_url="login/")
 def tells(request):
     context = Netposts.objects.all().order_by("id")
     a = int(context.count() / 6)
@@ -89,15 +103,6 @@ def tell(request, slug):
         return render(request, "tell.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
 
 
-def home(request):
-
-    context2 = posts.objects.all().order_by("id")
-    a = int(context2.count())
-    context = posts.objects.all()[a-6:a]
-    a = int(context.count())
-    print(posts.objects.count())
-    print(context)
-    return render(request, "index.html", {"context": context})
 
 #************************************************************************************************************************************************************
 def antenas(request):
