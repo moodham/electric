@@ -3,7 +3,7 @@
 
 
 
-This repository contains the Django application which powers(http://electric-wiring.ir/).
+This repository contains the Django application (http://electric-wiring.ir/).
 
 ## What's in it?
 
