@@ -3,6 +3,7 @@
 
 <head>
 	{% load static %}
+	{% load socialaccount %}
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +36,6 @@
 
 
 
-
 	<header>
 		<div id="main-menu" class="main-menu-container tbg navbar-fixed-top">
 			<div class="main-menu">
@@ -56,14 +56,18 @@
 								<!-- Collect the nav links, forms, and other content for toggling -->
 								<nav class="collapse navbar-collapse navbar-left" id="bs-example-navbar-collapse-1">
 									<ul id="main-nav" class="navbar-nav" style="list-style-type:none;">
-										<li><a href="http://electric-wiring.ir/article/درباره برق کشی ساختمان">درباره ما</a>
+										<li><a href="http://electric-wiring.ir/article/درباره برق کشی ساختمان">درباره
+												ما</a>
 										</li>
 										<li><a href="{% url 'blogs name'  %}"> بلاگ</a></li>
 										<li><a href="{% url 'tells'  %}"> تعمیرات تلفن سانترال</a></li>
 										<li><a href="{% url 'antenas'  %}"> انتن مرکزی</a></li>
-										<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود <span
-													class="ti-import"></span></a></li>
+										<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود
+												<span class="ti-import"></span></a></li>
+										<li><a href="{% provider_login_url 'google'%}?next=/"> Login with Google</a>
+										</li>
 
+										<li><a href="admin/"> admin</a></li>
 
 									</ul><!-- /#main-nav -->
 								</nav><!-- /.navbar-collapse -->
@@ -77,10 +81,13 @@
 	</header> <!-- .cd-auto-hide-header -->
 	<!-- End of Header ============================================= -->
 
+
 	<!-- Start of banner section ============================================= -->
 	<section id="banner-area" class="banner-area-section home-2">
 		<div class="container">
+
 			<div class="row">
+
 				<div class="banner-area-content">
 					<div class="banner-area-head">
 						<h1 class="pb10">ساخت , طراحی و تعمیر نگهداری تابلوهای صنعتی برق</h1>
@@ -91,13 +98,29 @@
 
 						<div class="download-store ul-li">
 							<ul class="store-list">
-								<li><a target="blank"><img src={% static "pics/store/google.png" %}></a></li>
-								<li><a target="blank"><img src={% static "pics/store/apple.png" %}></a></li>
+
+								{% if user.is_authenticated %}
+								<span class="navbar-text">Logged in as {{user.username}} | </span>
+								<li class="nav-item">
+									<a class="nav-link" href="logout/">Logout</a>
+								</li>
+								<li><a target="blank" href="userpost/"><img src={% static "pics/store/apple.png" %}></a>
+								</li>
+								{% else %}
+								<li>
+									<a target="blank" class="nav-link" href="login/">
+										<img src={% static "pics/store/google.png" %}>Login
+									</a>
+								</li>
+								{% endif %}
+
 
 
 							</ul>
 						</div>
 						<div class="banner-mock-up home-1 zooming">
+
+
 							<img src={% static "pics/mock-up/Daco.png" %} alt="img">
 
 						</div>
@@ -107,6 +130,13 @@
 		</div><!-- /.container -->
 	</section>
 	<!-- End of banner section ============================================= -->
+
+	<!-- Start #for sighn with google ============================================= -->
+
+
+
+
+	<!-- End #for sighn with google ============================================= -->
 
 	<!-- Start of features section============================================= -->
 	<section id="features" class="features-section">
@@ -212,7 +242,8 @@
 									<div class="service-list ul-li ul-li-block">
 										<ul class="service-list-item">
 
-											<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود</a>
+											<li><a
+													href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود</a>
 												{% for i in context %}
 											<li><a href="http://electric-wiring.ir/blog/{{ i.post_title }}">
 													{{ i.post_title|truncatewords:5 }}</a>
@@ -232,7 +263,8 @@
 									<div class="service-list ul-li ul-li-block">
 										<ul class="service-list-item">
 
-											<li><a href="http://electric-wiring.ir/article/تماس با ما">تماس با ما</a></li>
+											<li><a href="http://electric-wiring.ir/article/تماس با ما">تماس با ما</a>
+											</li>
 										</ul>
 									</div>
 								</div>

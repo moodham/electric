@@ -7,6 +7,8 @@ from .views import blogs, blog, page_number, home, article, h , tells , tell,tel
 
 urlpatterns = [
     path("", home, name="home"),
+    
+
 
 
     path("tell/<slug>", tell, name="tell"),

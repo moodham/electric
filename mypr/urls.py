@@ -26,7 +26,9 @@ urlpatterns = [
     
 
     path('tinymce/', include('tinymce.urls')),
+    path("", include("allauth.urls")), # #for sighn with google
     path("", include('blogs.urls')),
+    path('userpost/', include('main.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

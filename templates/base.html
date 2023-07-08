@@ -8,7 +8,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% if context.post_keywords %}
- 	<meta name="keywords" content="{{context.post_keywords}}">
+	<meta name="keywords" content="{{context.post_keywords}}">
 	<meta name="description" content="{{context.post_description}}">
 	{% endif %}
 
@@ -16,7 +16,7 @@
 	<meta name="keywords" content="{{context0.post_keywords}}">
 	<meta name="description" content="{{context0.post_description}}">
 	{% endif %}
-	
+
 	<meta name=”robots” content="index, follow">
 
 	<title> {{page_title}} </title>
@@ -62,12 +62,18 @@
 								<!-- Collect the nav links, forms, and other content for toggling -->
 								<nav class="collapse navbar-collapse navbar-left" id="bs-example-navbar-collapse-1">
 									<ul id="main-nav" class="navbar-nav" style="list-style-type:none;">
-										<li><a href="http://electric-wiring.ir/article/درباره برق کشی ساختمان">درباره ما</a></li>
+										<li><a href="http://electric-wiring.ir/article/درباره برق کشی ساختمان">درباره
+												ما</a></li>
 										<li><a href="{% url 'blogs name'  %}"> بلاگ</a></li>
 										<li><a href="{% url 'tells'  %}"> تعمیرات تلفن سانترال</a></li>
-																				<li><a href="{% url 'antenas'  %}"> انتن مرکزی</a></li>
-										<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود <span
-													class="ti-import"></span></a></li>
+										<li><a href="{% url 'antenas'  %}"> انتن مرکزی</a></li>
+										<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود
+												<span class="ti-import"></span></a></li>
+										{% if user.is_authenticated %}
+										<li><a href="logout/"> Logout  {{user.username}} user</a></li>
+										{% else %}
+										<li><a href="login/"> Login</a></li>
+										{% endif %}
 
 									</ul><!-- /#main-nav -->
 								</nav><!-- /.navbar-collapse -->
@@ -139,7 +145,8 @@
 									<div class="service-list ul-li ul-li-block">
 										<ul class="service-list-item">
 
-											<li><a href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود</a>
+											<li><a
+													href="http://electric-wiring.ir/article/دانلود کتاب و فیلم اموزشی">دانلود</a>
 											</li>
 										</ul>
 									</div>
@@ -154,8 +161,9 @@
 									<div class="service-list ul-li ul-li-block">
 										<ul class="service-list-item">
 
-											<li><a href="http://electric-wiring.ir/article/تماس با ما">تماس با ما</a></li>
-											  
+											<li><a href="http://electric-wiring.ir/article/تماس با ما">تماس با ما</a>
+											</li>
+
 											<li>time is {% now "jS F Y H:i" %} </li>
 										</ul>
 									</div>
