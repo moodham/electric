@@ -1,8 +1,13 @@
 import MySQLdb 
 
 database1 = "hearsir2_electric"
+
 user1 = ""
 password1 = "spQvT:z#"
+
+user1 = "11"
+password1 = "1"
+
 db = MySQLdb.connect(host="localhost", user=user1, password=password1, database=database1, charset='utf8', use_unicode=True)
 x = (
     "علائم سیم کشی ساختمان",
