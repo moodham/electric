@@ -9,8 +9,6 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User, Group
 
-# class home(TemplateView):
-#    template_name = "index.html"
 
 
 def home(request):
@@ -21,7 +19,7 @@ def home(request):
     a = int(context.count())
     print(posts.objects.count())
     print(context)
-    return render(request, "index.html", {"context": context})
+    return render(request, "templates/index.html", {"context": context})
 
 @login_required(login_url="login/")
 def tells(request):
@@ -38,7 +36,7 @@ def tells(request):
     print(type(x), x)
     print(a)
     print(len(context))
-    return render(request, "tells.html", {"context": context, "x": x, "page_title": page_title})
+    return render(request, "templates/tells.html", {"context": context, "x": x, "page_title": page_title})
 
 def tells_page_number(request, pagenumbers):
     print(pagenumbers)
@@ -65,7 +63,7 @@ def tells_page_number(request, pagenumbers):
     pagenumbers5 = pagenumbers + 5
     page_title = "صفحه مطالب  تلفن سانترال-"+str(pagenumbers/6)
 
-    return render(request, "tells2.html", {"context": context, "page_title": page_title, "pagenumbers": pagenumbers, "pagenumbers1": pagenumbers1, "pagenumbers2": pagenumbers2, "pagenumbers3": pagenumbers3, "pagenumbers4": pagenumbers4, "pagenumbers5": pagenumbers5})
+    return render(request, "templates/tells2.html", {"context": context, "page_title": page_title, "pagenumbers": pagenumbers, "pagenumbers1": pagenumbers1, "pagenumbers2": pagenumbers2, "pagenumbers3": pagenumbers3, "pagenumbers4": pagenumbers4, "pagenumbers5": pagenumbers5})
 
 
 def tell(request, slug):
@@ -95,12 +93,12 @@ def tell(request, slug):
             # process the data in form.cleaned_data as required
             # ...
 
-            return render(request, "tell.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
+            return render(request, "templates/tell.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
 
     # if a GET (or any other method) we'll create a blank form
     else:
 
-        return render(request, "tell.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
+        return render(request, "templates/tell.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
 
 
 
@@ -119,7 +117,7 @@ def antenas(request):
     print(type(x), x)
     print(a)
     print(len(context))
-    return render(request, "antenas.html", {"context": context, "x": x, "page_title": page_title})
+    return render(request, "templates/antenas.html", {"context": context, "x": x, "page_title": page_title})
 
 def antenas_page_number(request, pagenumbers):
     print(pagenumbers)
@@ -146,7 +144,7 @@ def antenas_page_number(request, pagenumbers):
     pagenumbers5 = pagenumbers + 5
     page_title = "صفحه مطالب  آنتن مرکزی-"+str(pagenumbers/6)
 
-    return render(request, "antenas2.html", {"context": context, "page_title": page_title, "pagenumbers": pagenumbers, "pagenumbers1": pagenumbers1, "pagenumbers2": pagenumbers2, "pagenumbers3": pagenumbers3, "pagenumbers4": pagenumbers4, "pagenumbers5": pagenumbers5})
+    return render(request, "templates/antenas2.html", {"context": context, "page_title": page_title, "pagenumbers": pagenumbers, "pagenumbers1": pagenumbers1, "pagenumbers2": pagenumbers2, "pagenumbers3": pagenumbers3, "pagenumbers4": pagenumbers4, "pagenumbers5": pagenumbers5})
 
 
 def antenna(request, slug):
@@ -176,18 +174,18 @@ def antenna(request, slug):
             # process the data in form.cleaned_data as required
             # ...
 
-            return render(request, "antena.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
+            return render(request, "templates/antena.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
 
     # if a GET (or any other method) we'll create a blank form
     else:
 
-        return render(request, "antena.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
+        return render(request, "templates/antena.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
 
 
 
 #**************************************************************************************
 class h(TemplateView):
-    template_name = "i.html"
+    template_name = "templates/i.html"
 
 
 def blog(request, slug):
@@ -216,12 +214,12 @@ def blog(request, slug):
             # process the data in form.cleaned_data as required
             # ...
 
-            return render(request, "blog.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
+            return render(request, "templates/blog.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
 
     # if a GET (or any other method) we'll create a blank form
     else:
 
-        return render(request, "blog.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
+        return render(request, "templates/blog.html", {"context": context, "context0": context[0], "page_title": page_title, "comment": comment, 'form': commentform()})
 
 
 
@@ -236,7 +234,7 @@ def article(request, slug):
     print(entry_list)
     print(Article.objects.count())
 
-    return render(request, "article.html", {"context": context[0], "page_title": page_title})
+    return render(request, "templates/article.html", {"context": context[0], "page_title": page_title})
 
 
 def blogs(request):
@@ -253,7 +251,7 @@ def blogs(request):
     print(type(x), x)
     print(a)
     print(len(context))
-    return render(request, "blogs.html", {"context": context, "x": x, "page_title": page_title})
+    return render(request, "templates/blogs.html", {"context": context, "x": x, "page_title": page_title})
 
 
 def page_number(request, pagenumbers):
@@ -281,7 +279,7 @@ def page_number(request, pagenumbers):
     pagenumbers5 = pagenumbers + 5
     page_title = "صفحه مطالب برقکار شماره-"+str(pagenumbers/6)
 
-    return render(request, "blogs2.html", {"context": context, "page_title": page_title, "pagenumbers": pagenumbers, "pagenumbers1": pagenumbers1, "pagenumbers2": pagenumbers2, "pagenumbers3": pagenumbers3, "pagenumbers4": pagenumbers4, "pagenumbers5": pagenumbers5})
+    return render(request, "templates/blogs2.html", {"context": context, "page_title": page_title, "pagenumbers": pagenumbers, "pagenumbers1": pagenumbers1, "pagenumbers2": pagenumbers2, "pagenumbers3": pagenumbers3, "pagenumbers4": pagenumbers4, "pagenumbers5": pagenumbers5})
 
 
 print("sport ")

@@ -104,14 +104,16 @@
 								<li class="nav-item">
 									<a class="nav-link" href="logout/">Logout</a>
 								</li>
+								<li><a target="blank" href="userpost/"><img src={% static "pics/store/apple.png" %}></a>
+								</li>
 								{% else %}
-
-
-
-								<li><a target="blank" class="nav-link" href="login/"><img src={%
-											static "pics/store/google.png" %}>Login</a></li>
+								<li>
+									<a target="blank" class="nav-link" href="login/">
+										<img src={% static "pics/store/google.png" %}>Login
+									</a>
+								</li>
 								{% endif %}
-								<li><a target="blank"><img src={% static "pics/store/apple.png" %}></a></li>
+
 
 
 							</ul>

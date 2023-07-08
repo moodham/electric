@@ -48,10 +48,14 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
-
-
+    'main.apps.MainConfig',
+    'crispy_forms',
+    'crispy_bootstrap5'
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 #Django Google OAuth   --#for sighn with google
 
@@ -97,7 +101,7 @@ TEMPLATES = [
     {
 
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [BASE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
